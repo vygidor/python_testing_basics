@@ -34,6 +34,6 @@ class UITest(unittest.TestCase):
         # find_button.click()
 
 # close the browser window
-#    @classmethod
-#    def tearDownClass(cls):
-#        cls.driver.quit()
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
