@@ -17,6 +17,7 @@ class UITest(unittest.TestCase):
             'Google')
 
 #here comes the magic :)
+#testing push from pycharm
 
 #close the browser window
     @classmethod
