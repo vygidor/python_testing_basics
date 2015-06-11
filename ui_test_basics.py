@@ -6,7 +6,8 @@ from selenium import webdriver
 class UITest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Firefox() #test will be performed in Firefox
+         #test will be performed in Firefox
+        cls.driver = webdriver.Firefox()
 
 #open page in browser
     def test_title(google):
