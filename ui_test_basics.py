@@ -1,4 +1,4 @@
-__author__ = 'vygidor'
+#__author__ = 'vygidor'
 
 import unittest
 from selenium import webdriver
