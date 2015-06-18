@@ -15,13 +15,13 @@ Files *ui_test_basics2.py*, *ui_test_basics3.py* and *ui_test_basics4.py* are ba
 ##Using Safari browser
 When you simply try to run a test using `webdriver.Safari()` you will get an `SELENIUM_SERVER_JAR` message.
 I found several solutions for running Selenium Webdriver with Python bindings on Safari browser but none of them worked for me.
-It should be easy. First, you need valid certificate from Apple. And yes, that's a major stop for me. Apple merged his Safari Developer Program with other one(s) and created Apple Developer Program which costs 99 USD per membership year. So a showstopper for me. If you have it, continue.
-Second, you need to download '[Selenium Standalone Server](http://www.seleniumhq.org/download/)' and put it somewhere (I put it in the same directory as my python script). Then you are able to set the `SELENIUM_SERVER_JAR` variable:
-`os.environ["SELENIUM_SERVER_JAR"] = "selenium-server-standalone-2.46.0.jar"`
-Don't forget to `import os`.
+It should be easy. First, you need valid certificate from Apple. And yes, that's a major stop for me. Apple merged his Safari Developer Program with other one(s) and created Apple Developer Program which costs 99 USD per membership year. So a showstopper for me. If you have it, continue.  
+Second, you need to download '[Selenium Standalone Server](http://www.seleniumhq.org/download/)' and put it somewhere (I put it in the same directory as my python script). Then you are able to set the `SELENIUM_SERVER_JAR` variable:  
+`os.environ["SELENIUM_SERVER_JAR"] = "selenium-server-standalone-2.46.0.jar"`  
+Don't forget to `import os`.  
 Third, you need to install an extension into Safari. You can use downloaded .JAR file, copy it to a directory of your choice, run `jar xf selenium-server-standalone-2.46.0.jar` (the filename can be different in your case) and navigate to `org/openqa/selenium/safari` where *SafariDriver.safariextz* is located. Just install & activate it (Open Safari -> Preferences -> Extensions (tab)).
 
-Note: if you have a solution for Safari 8 on Yosemite (10.10.X) which is working, pls share it with me.
+Note: if you have a solution for Safari 8 on Yosemite (10.10.X) which is working, pls share it with me.  
 Note #2: there is a brew formula `selenium-server-standalone` which can be installed instead of downloading .JAR file.
 
 Comming soon:
