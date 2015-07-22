@@ -24,8 +24,10 @@ Third, you need to install an extension into Safari. You can use downloaded .JAR
 Note: if you have a solution for Safari 8 on Yosemite (10.10.X) which is working, pls share it with me.  
 Note #2: there is a brew formula `selenium-server-standalone` which can be installed instead of downloading .JAR file.
 
+##Using Chrome
+Before you run a python file *ui_test_basics5.py* it is good to read 'Chromedriver - Getting Started(https://sites.google.com/a/chromium.org/chromedriver/getting-started)' to find out how to configure the script to get chromedriver executable to work (best choice for MAC OS X is to download it to /usr/bin) and setup the PATH so you don;t get any kind of error).
+
 Comming soon:
-- Chrome browser
 - cross-browser script
 
 Credits:
@@ -39,3 +41,4 @@ Credits:
 - https://code.google.com/p/selenium/wiki/SafariDriver
 - https://blog.codecentric.de/en/2015/02/selenium-webdriver-safari-8/
 - http://damien.co/resources/how-to-get-started-selenium-2-mac-os-x-java-7403
+- https://sites.google.com/a/chromium.org/chromedriver/home
