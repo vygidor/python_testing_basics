@@ -1,4 +1,5 @@
 # Python automation testing basics
+##UI testing with Python and Selenium webdriver
 Understanding the basics with data driven UI testing with Python, [Selenium](https://pypi.python.org/pypi/selenium) &amp; [nose](https://nose.readthedocs.org/en/latest/) / [unittest](https://docs.python.org/2/library/unittest.html).
 
 Note: '[nose](https://nose.readthedocs.org/en/latest/)' is used only for standalone execution. As I use PyCharm with '[pydev](https://www.jetbrains.com/pycharm/help/remote-debugging.html)' support for debugging and '[unittest](https://docs.python.org/2/library/unittest.html)' module for running the tests, I am actually not using it.
@@ -25,7 +26,7 @@ Note: if you have a solution for Safari 8 on Yosemite (10.10.X) which is working
 Note #2: there is a brew formula `selenium-server-standalone` which can be installed instead of downloading .JAR file.
 
 ##Using Chrome
-Before you run a python file *ui_test_basics5.py* it is good to read 'Chromedriver - Getting Started(https://sites.google.com/a/chromium.org/chromedriver/getting-started)' to find out how to configure the script to get chromedriver executable to work (best choice for MAC OS X is to download it to /usr/bin) and setup the PATH so you don;t get any kind of error).
+Before you run a python file *ui_test_basics5.py* it is good to read 'Chromedriver - Getting Started (https://sites.google.com/a/chromium.org/chromedriver/getting-started)' to find out how to configure the script to get chromedriver executable to work (best choice for MAC OS X is to download it to /usr/bin) and setup the PATH so you don;t get any kind of error).
 
 Comming soon:
 - cross-browser script

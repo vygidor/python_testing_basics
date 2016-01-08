@@ -3,7 +3,6 @@ __author__ = 'vygidor'
 import unittest
 from selenium import webdriver
 
-
 class UITest(unittest.TestCase):
 
     @classmethod
@@ -28,6 +27,6 @@ class UITest(unittest.TestCase):
         search_input.submit()
 
     # close the browser window
-    @classmethod
-    def tearDownClass(cls):
-        cls.driver.quit()
+    # @classmethod
+    # def tearDownClass(cls):
+    #   cls.driver.quit()
