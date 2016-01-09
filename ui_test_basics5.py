@@ -18,10 +18,18 @@ class UITest(unittest.TestCase):
             'Google')
 
     # fill search field
-    def test_2_search(self):
+    def test_2_searchbyname(self):
         self.driver.get('http://www.google.com')
         search_input = self.driver.find_element_by_name("q")
         search_input.send_keys("Python Selenium test driven testing")
+        search_input.submit()
+
+    # the same as test_2_searchbyname - the element will be defined by XPATH
+    def test_3_searchbyxpath(self):
+        self.driver.get('http://www.google.com')
+        #search_input = self.driver.find_element_by_xpath('//*[@id="q"]') //*[@id="lst-ib"]
+        search_input = self.driver.find_element_by_xpath('//*[@id="lst-ib"]')
+        search_input.send_keys("XPath")
         search_input.submit()
 
      # close the browser window
