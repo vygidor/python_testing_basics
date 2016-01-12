@@ -30,7 +30,7 @@ Before you run a python file *ui_test_basics5.py* it is good to read 'Chromedriv
 
 Comming soon:
 - cross-browser script
-- *ui_test_basics5.py* will be improved to cover some regularly used actions
+- script using page object pattern
 
 Credits:
 - http://selenium-python.readthedocs.org/en/latest/index.html
