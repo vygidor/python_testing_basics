@@ -29,10 +29,10 @@ Note #2: there is a brew formula `selenium-server-standalone` which can be insta
 Before you run a python file *ui_test_basics5.py* it is good to read 'Chromedriver - Getting Started (https://sites.google.com/a/chromium.org/chromedriver/getting-started)' to find out how to configure the script to get chromedriver executable to work (best choice for MAC OS X is to download it to /usr/bin) and setup the PATH so you don't get any kind of error).
 
 ##Page object pattern script
-in *PO_template_script* directory you can find a template script using page object pattern.
-Comming soon:
+In *PO_template_script* directory you can find a template script using page object pattern.
+
+Coming soon:
 - cross-browser script
-- script using page object pattern
 
 Credits:
 - http://selenium-python.readthedocs.org/en/latest/index.html
