@@ -11,7 +11,7 @@ A testcase is created by subclassing `unittest.TestCase`. The individual tests a
 The `setUp()` and `tearDown()` methods allow you to define instructions that will be executed before and after each test method.
 
 ## Other Automated tests
-> Files *ui_test_basics2.py*, *ui_test_basics3.py* and *ui_test_basics4.py* are basic .py scripts demonstrating the ability to build the automated test framework with Selenium Webdriver and Python. All except *ui_test_basics4.py* (Safari) and *ui_test_basics5* (Chrome) are using Firefox browser.
+Files *ui_test_basics2.py*, *ui_test_basics3.py* and *ui_test_basics4.py* are basic .py scripts demonstrating the ability to build the automated test framework with Selenium Webdriver and Python. All except *ui_test_basics4.py* (Safari) and *ui_test_basics5* (Chrome) are using Firefox browser.
 
 ##Using Safari browser
 When you simply try to run a test using `webdriver.Safari()` you will get an `SELENIUM_SERVER_JAR` message.
