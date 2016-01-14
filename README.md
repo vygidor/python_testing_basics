@@ -31,10 +31,10 @@ Before you run a python file *ui_test_basics5.py* it is good to read 'Chromedriv
 ##Page object pattern script
 In *PO_template_script* directory you can find a template script using page object pattern.
 
-test_case_script.py
- +-- page.py
-  +-- element.py
-  +-- locators.py
+    test_case_script.py
+     +-- page.py
+      +-- element.py
+      +-- locators.py
 
 
 
