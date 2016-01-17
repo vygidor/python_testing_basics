@@ -1,17 +1,18 @@
 # Python automation testing basics
-##UI testing with Python and Selenium webdriver
+##UI testing with Python and Selenium Webdriver
 Understanding the basics with data driven UI testing with Python, [Selenium](https://pypi.python.org/pypi/selenium) &amp; [nose](https://nose.readthedocs.org/en/latest/) / [unittest](https://docs.python.org/2/library/unittest.html).
 
 Note: '[nose](https://nose.readthedocs.org/en/latest/)' is used only for standalone execution. As I use PyCharm with '[pydev](https://www.jetbrains.com/pycharm/help/remote-debugging.html)' support for debugging and '[unittest](https://docs.python.org/2/library/unittest.html)' module for running the tests, I am actually not using it.
 
 For DDT you have to install '[ddt](https://ddt.readthedocs.org/en/latest/index.html)'.
 
-## Automated unit tests
-A testcase is created by subclassing `unittest.TestCase`. The individual tests are defined with methods whose names start with the letters `test`. This naming convention informs the test runner about which methods represent tests. (see *ui_test_basics.py*)
+## Automated tests framework - unittest
+A test case is created by subclassing `unittest.TestCase`. The individual tests are defined with methods whose names start with the letters `test`. This naming convention informs the test runner about which methods represent tests. (see *ui_test_basics.py*)
 The `setUp()` and `tearDown()` methods allow you to define instructions that will be executed before and after each test method.
 
 ## Other Automated tests
 Files *ui_test_basics2.py*, *ui_test_basics3.py* and *ui_test_basics4.py* are basic .py scripts demonstrating the ability to build the automated test framework with Selenium Webdriver and Python. All except *ui_test_basics4.py* (Safari) and *ui_test_basics5* (Chrome) are using Firefox browser.
+As Selenium Webdriver is native written for use with Firefox, so for other browser support there is need to install additional drivers (as described below).
 
 ##Using Safari browser
 When you simply try to run a test using `webdriver.Safari()` you will get an `SELENIUM_SERVER_JAR` message.
@@ -39,8 +40,9 @@ In *PO_template_script* directory you can find a template script using page obje
 
 
 
-Coming soon:
+Coming soon (maybe):
 - cross-browser script
+- data driven script
 
 Credits:
 - http://selenium-python.readthedocs.org/en/latest/index.html
