@@ -37,10 +37,12 @@ In *PO_template_script* directory you can find a template script using page obje
       +-- element.py
       +-- locators.py
 
-
+This approach is well-known as Page Objects Model (POM) as well. For further information and explanation how and why, please read carefully: [Page Objects in Python](https://pragprog.com/magazines/2010-08/page-objects-in-python)
 
 
 Coming soon (maybe):
+- taking screenshots
+- HTML report
 - cross-browser script
 - data driven script
 
