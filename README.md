@@ -40,7 +40,18 @@ In *PO_template_script* directory you can find a template script using page obje
 This approach is well-known as Page Objects Model (POM) as well. For further information and explanation how and why, please read carefully: [Page Objects in Python](https://pragprog.com/magazines/2010-08/page-objects-in-python)
 
 ### *Screenshot* functionality
-In *ui_test_basics5.py* you will find the usage of "take screenshot on error" in the 'test_2_search_by_name' test case.
+In *ui_test_basics5.py* you will find the usage of "take screenshot on error" in the `test_2_search_by_name` test case. Another solution used in `tearDown()` method:
+``from datetime import datetime
+from selenium import webdriver
+
+browser = webdriver.Firefox()
+
+try:
+    # do some webdriver stuff here
+except Exception as e:
+    print e
+    now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    browser.get_screenshot_as_file('screenshot-%s.png' % now)``
 
 Coming soon (maybe):
 - HTML report
