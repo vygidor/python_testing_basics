@@ -8,7 +8,7 @@ For DDT you have to install '[ddt](https://ddt.readthedocs.org/en/latest/index.h
 
 ## Automated tests framework - unittest
 A test case is created by subclassing `unittest.TestCase`. The individual tests are defined with methods whose names start with the letters `test`. This naming convention informs the test runner about which methods represent tests. (see *ui_test_basics.py*)
-The `setUp()` and `tearDown()` methods allow you to define instructions that will be executed before and after each test method.
+The `setUp()` and `tearDown()` methods allow you to define instructions that will be executed before and after each test method (used in *ui_test_basics5.py*).
 
 ## Other Automated tests
 Files *ui_test_basics2.py*, *ui_test_basics3.py* and *ui_test_basics4.py* are basic .py scripts demonstrating the ability to build the automated test framework with Selenium Webdriver and Python. All except *ui_test_basics4.py* (Safari) and *ui_test_basics5* (Chrome) are using Firefox browser.
@@ -39,9 +39,10 @@ In *PO_template_script* directory you can find a template script using page obje
 
 This approach is well-known as Page Objects Model (POM) as well. For further information and explanation how and why, please read carefully: [Page Objects in Python](https://pragprog.com/magazines/2010-08/page-objects-in-python)
 
+### *Screenshot* functionality
+In *ui_test_basics5.py* you will find the usage of "take screenshot on error" in the 'test_2_search_by_name' test case.
 
 Coming soon (maybe):
-- taking screenshots
 - HTML report
 - cross-browser script
 - data driven script

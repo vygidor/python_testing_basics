@@ -1,6 +1,5 @@
-__author__ = 'vygidor'
-
 import unittest
+from datetime import datetime  # to support the screenshot feature
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
@@ -23,10 +22,16 @@ class UITest(unittest.TestCase):
 
     # fill search field
     def test_2_search_by_name(self):
-        self.driver.get('http://www.google.com')
-        search_input = self.driver.find_element_by_name("q")
-        search_input.send_keys("Python Selenium test driven testing")
-        search_input.submit()
+        # the code was improved to show how the screenshot-on-error functionality can be used in the test case
+        try:
+            self.driver.get('http://www.google.com2')
+            search_input = self.driver.find_element_by_name("q")
+            search_input.send_keys("Python Selenium test driven testing")
+            search_input.submit()
+        except Exception as e:
+            print e
+            now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+            self.driver.get_screenshot_as_file('screenshot-%s.png' % now)
 
     # the same as test_2_searchbyname - the element will be defined by XPATH
     def test_3_search_by_xpath(self):
@@ -52,7 +57,8 @@ class UITest(unittest.TestCase):
         except TimeoutException:
             print "Loading took too much time!"
 
-    # will wait until the element is clickable (available to click) but not longer as defined in WebDriverWait (for this example it is 20 seconds)
+    # will wait until the element is clickable (available to click) but not longer as defined in WebDriverWait
+    # (for this example it is 20 seconds)
     def test_5_wait_until_clickable(self):
         self.driver.get('http://toolsqa.com')
         try:
@@ -64,6 +70,7 @@ class UITest(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         cls.driver.quit()
+
 
 if __name__ == "__main__":
     unittest.main()
