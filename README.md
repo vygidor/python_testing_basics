@@ -41,6 +41,7 @@ This approach is well-known as Page Objects Model (POM) as well. For further inf
 
 ### *Screenshot* functionality
 In *ui_test_basics5.py* you will find the usage of "take screenshot on error" in the `test_2_search_by_name` test case. Another solution used in `tearDown()` method:
+
     from datetime import datetime
     from selenium import webdriver
 
