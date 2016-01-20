@@ -42,17 +42,26 @@ This approach is well-known as Page Objects Model (POM) as well. For further inf
 ### *Screenshot* functionality
 In *ui_test_basics5.py* you will find the usage of "take screenshot on error" in the `test_2_search_by_name` test case. Another solution used in `tearDown()` method:
 
+    import sys, unittest
     from datetime import datetime
-    from selenium import webdriver
 
-    browser = webdriver.Firefox()
+    class TestCase(unittest.TestCase):
 
-    try:
-        # do some webdriver stuff here
-    except Exception as e:
-        print e
-        now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        browser.get_screenshot_as_file('screenshot-%s.png' % now)``
+        def setUp(self):
+            some_code
+
+        def test_case(self):
+            test case comes here
+
+        def tearDown(self):
+            if sys.exc_info()[0]:  # Returns the info of exception being handled
+                fail_url = self.driver.current_url
+                print fail_url
+                now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S-%f')
+                self.driver.get_screenshot_as_file('/path/to/file/%s.png' % now) # my tests work in parallel, so I need uniqe file names
+                fail_screenshot_url = 'http://debugtool/screenshots/%s.png' % now
+                print fail_screenshot_url
+            self.driver.quit()
 
 ### HTML report
 HTMLTestRunner is an extension to the Python standard library's unittest module. It generates easy to use HTML test reports.

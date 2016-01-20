@@ -22,9 +22,10 @@ class UITest(unittest.TestCase):
 
     # fill search field
     def test_2_search_by_name(self):
+        # negative test case
         # the code was improved to show how the screenshot-on-error functionality can be used in the test case
         try:
-            self.driver.get('http://www.google.com2')
+            self.driver.get('http://www.google.com2@#')
             search_input = self.driver.find_element_by_name("q")
             search_input.send_keys("Python Selenium test driven testing")
             search_input.submit()
