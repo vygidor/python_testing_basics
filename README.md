@@ -54,9 +54,13 @@ In *ui_test_basics5.py* you will find the usage of "take screenshot on error" in
         now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
         browser.get_screenshot_as_file('screenshot-%s.png' % now)``
 
+### HTML report
+HTMLTestRunner is an extension to the Python standard library's unittest module. It generates easy to use HTML test reports.
+See *test_HTMLTestRunner.py* for test and demo of *HTMLTestRunner.py*
+More about HTMLTestRunner: [http://tungwaiyip.info/software/HTMLTestRunner.html](http://tungwaiyip.info/software/HTMLTestRunner.html)
+
 
 Coming soon (maybe):
-- HTML report
 - cross-browser script
 - data driven script
 
