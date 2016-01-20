@@ -22,7 +22,7 @@ class UITest(unittest.TestCase):
 
     # fill search field
     def test_2_search_by_name(self):
-        # negative test case
+        # negative test case - it will shown in report like Passed
         # the code was improved to show how the screenshot-on-error functionality can be used in the test case
         try:
             self.driver.get('http://www.google.com2@#')
@@ -33,6 +33,9 @@ class UITest(unittest.TestCase):
             print e
             now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
             self.driver.get_screenshot_as_file('screenshot-%s.png' % now)
+            # in case of positive test case you need to add here 'raise' to raise the exception
+            # in that case the test case will be shown in report like Failed
+            # raise
 
     # the same as test_2_searchbyname - the element will be defined by XPATH
     def test_3_search_by_xpath(self):
