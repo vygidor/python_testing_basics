@@ -4,7 +4,7 @@ Understanding the basics with data driven UI testing with Python, [Selenium](htt
 
 Note: '[nose](https://nose.readthedocs.org/en/latest/)' is used only for standalone execution. As I use PyCharm with '[pydev](https://www.jetbrains.com/pycharm/help/remote-debugging.html)' support for debugging and '[unittest](https://docs.python.org/2/library/unittest.html)' module for running the tests, I am actually not using it.
 
-For DDT you have to install '[ddt](https://ddt.readthedocs.org/en/latest/index.html)'.
+For DDT (Data driven testing) you have to install '[ddt](https://ddt.readthedocs.org/en/latest/index.html)', '[xlrd](http://www.python-excel.org/)' or use *csv*
 
 ## Automated tests framework - unittest
 A test case is created by subclassing `unittest.TestCase`. The individual tests are defined with methods whose names start with the letters `test`. This naming convention informs the test runner about which methods represent tests. (see *ui_test_basics.py*)
@@ -68,10 +68,13 @@ HTMLTestRunner is an extension to the Python standard library's unittest module.
 See *test_HTMLTestRunner.py* for test and demo of *HTMLTestRunner.py*
 More about HTMLTestRunner: [http://tungwaiyip.info/software/HTMLTestRunner.html](http://tungwaiyip.info/software/HTMLTestRunner.html)
 
+### Data driven testing
+Example of *xlrd* impementation - *DDT/xlrd_example.py*
+
 
 Coming soon (maybe):
 - cross-browser script
-- data driven script
+- data driven script with csv source file
 
 Credits:
 - http://selenium-python.readthedocs.org/en/latest/index.html
